@@ -9,7 +9,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.create post_params(:name, :bio)
+    @song = Song.create post_params(:name, :artist_id, :genre_id)
     redirect_to song_path(@song)
   end
 
